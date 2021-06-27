@@ -1,0 +1,40 @@
+package ActionsClass;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import java.util.concurrent.TimeUnit;
+
+public class MouseMovementConcept {
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromeDriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+
+        //Dynamic wait
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+
+        driver.get("http://mrbool.com/");
+
+        Actions action=new Actions(driver);
+        action.moveToElement(driver.findElement(By.className("menulink"))).build().perform();
+
+        Thread.sleep(3000);
+
+        WebElement article=driver.findElement(By.xpath("//ul[@class='submenu']//li//a[text()='Articles']"));
+        article.click();
+
+
+
+    }
+
+
+
+}

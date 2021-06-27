@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/selenium/src">
+        <classes>
+            <class name="Testcase.goibiboTestCase">
+                <methods>
+                    <include name="goibibo"/>
+                </methods>
+            </class>
+            <class name="Testcase.hotelPageTestCase">
+                <methods>
+                    <include name="hotel"/>
+                </methods>
+            </class>
+            <class name="Testcase.loginTestcase">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="com.Test.ExceptionTimeOutTest">
+                <methods>
+                    <include name="infiniteLoopTest"/>
+                </methods>
+            </class>
+            <class name="com.Test.InvocationCountTest">
+                <methods>
+                    <include name="Sum"/>
+                </methods>
+            </class>
+            <class name="com.Test.LoginTesParameterization">
+                <methods>
+                    <include name="launchURLTest"/>
+                    <include name="LoginTest"/>
+                </methods>
+            </class>
+            <class name="com.Test.TestNgBasic">
+                <methods>
+                    <include name="googleTitleTest"/>
+                    <include name="googleSearchTest"/>
+                    <include name="googleLogoTest"/>
+                </methods>
+            </class>
+            <class name="com.Test.TestNgFFeatures">
+                <methods>
+                    <include name="LoginTest"/>
+                    <include name="HomepageTest"/>
+                </methods>
+            </class>
+            <class name="com.Test.googleTest">
+                <methods>
+                    <include name="googleTitleTest"/>
+                    <include name="mailLinkTest"/>
+                    <include name="test"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                </methods>
+            </class>
+            <class name="com.Test.googleTiltleTest">
+                <methods>
+                    <include name="googleTitleTest"/>
+                    <include name="googleLogoTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
